@@ -1,0 +1,12 @@
+%{ if login_note_ascii_art != null }
+${login_note_ascii_art}
+%{ endif }
+  
+CONNECTED TO:
+
+    Hostname: ${hostname}
+    Role: ${role}
+    IP: ${ip}
+    Routerboard: ${routerboard}
+    Model: ${model}
+    Time Zone: ${time_zone}
