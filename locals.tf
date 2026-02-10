@@ -21,7 +21,7 @@ locals {
         for ip in a_rec.addrs : {
           address = ip
           comment = "${host}|DAL4"
-          list    = "FC_A_NTP"
+          list    = var.ntp_firewall_address_list_name
         }
       ]
     ]) :

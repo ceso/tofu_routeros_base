@@ -80,6 +80,11 @@ variable "ntp_servers" {
   type        = list(string)
   default     = ["time.cloudflare.com", "nts.netnod.se", "ptbtime1.ptb.de", "ntppool1.time.nl"]
 }
+variable "ntp_firewall_address_list_name" {
+  description = "The name of the Firewall address list for trusted NTP servers"
+  type        = string
+  default     = "FC_A_NTP"
+}
 variable "ntp_servers_settings" {
   description = <<-EOT
   The NTP Server settings that will be used.
