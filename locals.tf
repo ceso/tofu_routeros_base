@@ -1,5 +1,11 @@
 locals {
   # ------------------------------------------
+  # Constants
+  # ------------------------------------------
+  device_mode_router = "router"
+  device_mode_switch = "switch"
+
+  # ------------------------------------------
   # Basic configs
   # ------------------------------------------
   rendered_login_message = templatefile("${path.module}/templates/login_message_note.tfpl", {

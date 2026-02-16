@@ -65,10 +65,10 @@ variable "device_mode" {
 
   validation {
     condition = contains([
-      "Router",
-      "Switch"
+      local.device_mode_router,
+      local.device_mode_switch
     ], var.device_mode)
-    error_message = "'device_mode' must be one of Router or Switch"
+    error_message = "'device_mode' must be one of router or switch"
   }
 }
 
